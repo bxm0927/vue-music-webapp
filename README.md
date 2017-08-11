@@ -3,22 +3,20 @@
 
 👉 GitHub: https://github.com/bxm0927/vue-music-webapp
 
-👉 项目演示地址: https://github.com/bxm0927/vue-music-webapp （*在 GitHub Pages 中，通过 jsonp 请求的数据会被正常渲染，而由于无 node 服务，通过 axios 请求的数据不会被正常渲染*）
+👉 项目演示地址: https://bxm0927.github.io/vue-music-webapp/dist/ （*在 GitHub Pages 中，通过 jsonp 请求的数据会被正常渲染，而由于无 node 服务，通过 axios 请求的数据不会被正常渲染*）
 
 基于 **Vue 全家桶 (2.x)** 制作的移动端音乐 WebApp ，一个媲美原生的移动端音乐 App，项目完整、功能完备、UI美观、交互一流。
 
-<!-- more -->
-
-![图片预览](http://oph264zoo.bkt.clouddn.com/17-7-30/22143510.jpg)
+![图片预览](http://oph264zoo.bkt.clouddn.com/17-8-11/52879457.jpg)
 
 
 ## 技术栈
 
 【前端】
 
-- `Vue.js`：MVVM 框架
+- `Vue`：用于构建用户界面的 MVVM 框架。它的核心是**响应的数据绑定**和**组系统件**
 - `vue-router`：为单页面应用提供的路由系统，项目上线前使用了 `Lazy Loading Routes` 技术来实现异步加载优化性能
-- `vuex`：Vue.js 集中状态管理，类 Flux 的状态管理架构
+- `vuex`：Vue 集中状态管理，在多个组件共享某些状态时非常便捷
 - `vue-lazyload`：第三方图片懒加载库，优化页面加载速度
 - `better-scroll`：iscroll 的优化版，使移动端滑动体验更加流畅
 - `Sass(Scss)`：css 预编译处理器
@@ -27,12 +25,12 @@
 【后端】
 
 - `Node.js`：利用 Express 起一个本地测试服务器
-- `jsonp`：抓取 QQ音乐(移动端)数据
-- `axios`：结合 Node.js 代理后端请求，抓取 QQ音乐(PC端)数据
+- `jsonp`：服务端通讯。抓取 QQ音乐(移动端)数据
+- `axios`：服务端通讯。结合 Node.js 代理后端请求，抓取 QQ音乐(PC端)数据
 
 【自动化构建及其他工具】
 
-- `vue-cli`：vue 脚手架工具，快速初始化项目代码
+- `vue-cli`：Vue 脚手架工具，快速初始化项目代码
 - `eslint`：代码风格检查工具，规范代码书写
 - `vConsole`：移动端调试工具，在移动端输出日志
 
@@ -40,34 +38,16 @@
 ## 收获
 
 1. 总结了一套 Vue 通用组件，可以在其它项目中复用的 10+ 个基础组件、15+ 个业务组件
-1. 总结了一套常用的 SCSS mixin 库
-1. 总结了一套常用的 JS 工具函数库
-1. 体会到组件化、模块化开发带来的便捷
-1. 体会到将对象封装成类(ES6 class) 的便捷性，以及利用工厂方式初始化类实例
-
+2. 总结了一套常用的 SCSS mixin 库
+3. 总结了一套常用的 JS 工具函数库
+4. 体会到组件化、模块化开发带来的便捷
+5. 体会到将对象封装成类(ES6 class) 的便捷性，以及利用工厂方式初始化类实例
+6. 学会利用 `js` 编写过渡效果及动画效果制作良好的用户交互体验
 
 ## TODO
 
-1.
-2.
-3.
-
-
-## 目录结构
-
-```
-bootstrap/
-├── css/
-│   ├── bootstrap.css
-│   ├── bootstrap-theme.css
-├── js/
-│   ├── bootstrap.js
-│   └── bootstrap.min.js
-└── fonts/
-    ├── glyphicons-regular.ttf
-    ├── glyphicons-regular.woff
-    └── glyphicons-regular.woff2
-```
+1. 歌曲数据全部来自 QQ 音乐，接口改变了可能就要修改 `jsonp` 和 `axios` 代码
+2. 由于项目的应用级状态不多（10个左右），所以就没有将 `action`、`mutation`、和 `getters` 分割到单独的文件。但这样架构并不便于维护
 
 
 ## 实现细节
@@ -194,3 +174,5 @@ $ npm run build
 ## License
 
 The code is available under the [MIT license](https://opensource.org/licenses/MIT).
+
+![](http://oph264zoo.bkt.clouddn.com/17-8-11/10545126.jpg)
