@@ -1,0 +1,62 @@
+// @import '~@/common/scss/mymixin.scss';
+
+// 2x 3x 背景图片
+@mixin bg-image($name) {
+  background-image: url($name + '@2x.png');
+  @media (-webkit-min-device-pixel-ratio: 3),(min-device-pixel-ratio: 3) {
+    background-image: url($name + "@3x.png");
+  }
+}
+
+// 单行文本超出显示省略号
+@mixin no-wrap() {
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// 多行文本超出显示省略号
+@mixin no-wrap-multi($n) {
+  display: -webkit-box !important;
+  -ms-text-overflow: ellipsis;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $n; // 可显示行数
+}
+
+// 扩展点击区域
+@mixin extend-click() {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+  }
+}
+
+// 占据全屏
+// position: fixed;
+// top: 0;
+// left: 0;
+// right: 0;
+// bottom: 0;
+
+// 垂直居中
+// .no-result-wrapper {
+//   position: absolute;
+//   width: 100%;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+
+// 垂直居中
+// position: absolute;
+// top: 50%;
+// left: 50%;
+// transform: translate(-50%, -50%);
